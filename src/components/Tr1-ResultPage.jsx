@@ -49,7 +49,7 @@ export default function ResultPageContent() {
   }
 
   const handleBack = () => {
-    localStorage.removeItem("StudentData"); // ✅ only remove what you need
+    localStorage.clear(); // ✅ only remove what you need
     router.replace("/tech-exam");
   };
 
@@ -57,14 +57,14 @@ export default function ResultPageContent() {
     <div className="bg-gray-100 min-h-screen p-6">
       <Header />
 
-      <h1 className="text-2xl font-bold mb-6 text-center">Test Status </h1>
+       <h1 className="text-2xl font-bold mb-6 text-center mt-10">Test Status </h1>
 
       <div className="max-w-md mx-auto bg-white p-6 rounded shadow-lg text-center">
         {/* <p className="font-semibold">Name: {result.studentName}</p> */}
         <h3 className="font-semibold text-lg">
               Hi,<span className="font-normal text-blue-900 text-2xl font-bold "> <b>{result.studentName}</b></span>
               <div> Your test is successfully completed <br />
-                <h2 className="text-green-900 text-2xl font-bold mt-6">Thank You</h2>
+                <h2 className="text-green-900 text-2xl font-bold mt-4">Thank You</h2>
               </div>
             </h3>
         {/* <p className="font-semibold">Email: {result.studentEmail}</p>
